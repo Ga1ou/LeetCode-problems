@@ -1,0 +1,24 @@
+class Solution(object):
+    def kthGrammar(self, n, k):
+        """
+        :type n: int
+        :type k: int
+        :rtype: int
+        """
+        flag = True
+
+        # Calculate the total number of elements in the nth row, which is 2^(n-1).
+        n_len = 2**(n - 1)
+
+        # Continue until we reach the first row.
+        while n_len != 1:
+            # Halve the number of elements in the row.
+            n_len //= 2
+
+            # If k is in the second half of the row, adjust k and toggle the flag.
+            if k > n_len:
+                k = k - n_len
+                flag = not flag
+
+        # Return 0 if the flag indicates that the values are the same; otherwise, return 1.
+        return 0 if flag else 1
