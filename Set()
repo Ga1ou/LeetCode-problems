@@ -1,0 +1,10 @@
+pattern = "abba"
+s = "dog cat cat dog"
+
+set(pattern)
+set(s)
+
+
+Output:
+set([u'a', u'b'])
+set([u'dog', u'cat'])
