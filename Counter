@@ -3,12 +3,13 @@
 Ex: 
 Desciption:
     ransomNote = "a"
-
+    magazine = "b"
 Code:
     st1, st2 = Counter(ransomNote), Counter(magazine)
     print(st1) 
 
 [Output] Counter({u'a': 1})
+[Output] Counter({u'b': 1})
 
 2. What is "&"?
 
